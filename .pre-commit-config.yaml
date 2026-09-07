@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/AleksaC/hadolint-py
-    rev: 458cb25edf664682e3e856a53a2f9af33e068297  # v2.14.0
+    rev: 6e7504451511eaeb62a3e7f14d63b0296cbf86eb  # v2.15.1
     hooks:
       - id: hadolint
         args:
@@ -34,7 +34,7 @@ repos:
         exclude: pnpm-lock.yaml
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: 05fd71a57a467ccf5598f7e836d3af4cf9225abb  # v1.108.0
+    rev: bf9dd9c695ddaf238af36f179049202358ec22b7  # v1.108.1
     hooks:
       - id: terraform_providers_lock
         args:
@@ -52,7 +52,7 @@ repos:
           - --args=--config=__GIT_WORKING_DIR__/infrastructure/.tflint.hcl
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: 2700fd5671c633760d912769c041bfcde2b9a01b  # v0.15.22
+    rev: 65dbdb59d2f2d9c3bdc343c566821ad3319ddaa3  # v0.16.3
     hooks:
       - id: ruff-check
         args:
@@ -65,7 +65,7 @@ repos:
           - ruff.toml
 
   - repo: https://github.com/djlint/djLint
-    rev: 65979038f02fe370f6cf964f5260dd8874ab974b  # v1.42.2
+    rev: 76675b68608b5643655650bf461b7d2abb2e2a52  # v1.44.2
     hooks:
       - id: djlint-reformat-django
         files: templates/.*.html
@@ -93,15 +93,15 @@ repos:
         exclude: (pnpm-lock.yaml|\.yamllint)
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: 41e691678310dfd3833f7ab4e180ddb014310356  # v2.3.0
+    rev: 7ff8d35ae36a7d2b968f2f90b4c723e292e594ee  # v2.3.1
     hooks:
       - id: mypy
         additional_dependencies:
-          - strawberry-graphql==0.323.1
-          - strawberry-graphql-django==0.86.5
+          - strawberry-graphql==0.324.0
+          - strawberry-graphql-django==0.87.0
           - types-lxml==2026.2.16
-          - types-python-dateutil==2.9.0.20260716
-          - types-PyYAML==6.0.12.20260518
+          - types-python-dateutil==2.9.0.20260807
+          - types-PyYAML==6.0.12.20260815
           - types-requests==2.33.0.20260712
         entry: bash -c 'cd backend && mypy --config-file pyproject.toml src tests'
 
@@ -157,14 +157,14 @@ repos:
         files: ^infrastructure/.*\.tf$|^infrastructure/\.terraform-docs\.ya?ml$
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 3632ea90e7641b574983ddf3a11ccedefff3c881  # v2.25.3
+    rev: 67cd950188cc8e2611e9ac21d1b032fdd446c601  # v2.28.0
     hooks:
       - id: pyproject-fmt
         additional_dependencies:
           - toml-fmt-common<1.3.3
 
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: 067260dc5fe6ea86b7551bfd6f8b3ba4e6c93129  # v1.28.0
+    rev: 451b56af716f9f0d0c2b816503a3fd0cf8b036fa  # v1.29.0
     hooks:
       - id: zizmor
         args:
